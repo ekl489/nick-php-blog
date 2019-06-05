@@ -26,6 +26,8 @@
 
             // show correct page
 
+            echo $path[0] . ', ' . $path[1] . ', ' . $path[2];
+
             switch($path[1]){
                 case "":
                     require_once 'controllers/home.controller.php';

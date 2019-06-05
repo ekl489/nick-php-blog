@@ -1,0 +1,4 @@
+/* Post cards - add a slight margin below them to help separate them nicely */
+.card {
+    margin-bottom: 1rem;
+}

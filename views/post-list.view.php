@@ -8,10 +8,10 @@
             echo '<div class="card"><div class="card-body"><h5 class="card-title">'
                  . $post->title // show the title in card-title
                  . '</h5><p class="card-text">'
-                 . substr($post->body, 0, 35) . '...' // show a short extract of post body
-                 . '</p><a class="card-link" href="/posts/'
-                 . $post->id // add the correct link to the button
-                 . '">Read</a></div></div><br>';
+                 . substr($post->body, 0, 35) // show a short extract of post body
+                 . '... <a href="/posts/' 
+                 . $post->id // insert correct post link
+                 . '">Keep reading</a></p></div></div>';
         }
     ?>
     

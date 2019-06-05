@@ -11,7 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nick's PHP Blog</title>
 
-    <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../includes/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../includes/custom/styles.css">
 </head>
 <body>
     <?php

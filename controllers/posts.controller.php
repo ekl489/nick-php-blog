@@ -6,16 +6,14 @@
     // get posts list from mock db
     require_once 'models/posts.model.php';
 
-    // get path
-    //$path = substr($_SERVER['REQUEST_URI'], 7);
-
-    $id = is_numeric($path[count($path) - 1]) ? $path[count($path) - 1] : '';
-
-    // check if there is an id, if not then just show all posts.
-    if ($id != ''){
-
+    if($path[count($path) - 1] == 'posts'){
+        include_once 'views/post-list.view.php';
+    } else if(is_numeric($path[count($path) - 1])){
+        // looking for a single post
         // find the right post
+        $id = $path[count($path) - 1];
         $myPost = '';
+
         foreach($posts as &$post){
             if($post->id == $id){
                 $myPost = $post;
@@ -23,13 +21,13 @@
         }
         if($myPost == ''){
             // show error, no post found
-            require_once 'controllers/page-not-found.controller.php';
+            include_once 'controllers/page-not-found.controller.php';
             exit;
         } 
-
+        // post has been found! show it
         include_once 'views/post-full.view.php';
     } else {
-        include_once 'views/post-list.view.php';
+        // incorrect route -> show error
+        include_once 'controllers/page-not-found.controller.php';
     }
-
 ?>

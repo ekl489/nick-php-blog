@@ -1,10 +1,3 @@
-<?php 
-    if(!isset($myPost)){
-        require_once 'controllers/page-not-found.controller.php';
-        exit;
-    }
-?>
-
 <div>
     <span class="h1"><?php echo $myPost->title ?></span> 
     
